@@ -1,0 +1,45 @@
+﻿<?xml version="1.0"
+      encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dxui="http://dips.xamarin.ui.com"
+             mc:Ignorable="d"
+             x:Class="Forms.Playground.MountainApp.RegisterMountain">
+    <ContentView.Resources>
+        <Style TargetType="View"
+               x:Key="baseStyle">
+            <Setter Property="HorizontalOptions"
+                    Value="CenterAndExpand" />
+            <Setter Property="VerticalOptions"
+                    Value="CenterAndExpand" />
+        </Style>
+        <Style TargetType="Label"
+               BasedOn="{StaticResource baseStyle}">
+            <Setter Property="TextColor"
+                    Value="White" />
+        </Style>
+        <Style TargetType="Entry"
+               BasedOn="{StaticResource baseStyle}">
+            <Setter Property="TextColor"
+                    Value="White" />
+        </Style>
+    </ContentView.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Entry Grid.Row="0"
+               Keyboard="Text"
+               HorizontalOptions="Fill"
+               Placeholder="Name"
+               PlaceholderColor="#b3b3b3" />
+        <Entry Grid.Row="1"
+               Keyboard="Numeric"
+               HorizontalOptions="Fill"
+               Placeholder="Altitude"
+               PlaceholderColor="#b3b3b3" />
+    </Grid>
+</ContentView>

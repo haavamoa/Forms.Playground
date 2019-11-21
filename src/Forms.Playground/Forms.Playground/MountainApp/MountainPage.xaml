@@ -1,0 +1,89 @@
+﻿<?xml version="1.0"
+      encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:System="clr-namespace:System;assembly=netstandard"
+             xmlns:Models="clr-namespace:Forms.Playground.Models;assembly=Forms.Playground"
+             xmlns:Playground="clr-namespace:Forms.Playground;assembly=Forms.Playground"
+             xmlns:MountainApp="clr-namespace:Forms.Playground.MountainApp;assembly=Forms.Playground"
+             mc:Ignorable="d"
+             x:Class="Forms.Playground.MountainApp.MountainPage"
+             BackgroundColor="#364058"
+             x:Name="page">
+    <AbsoluteLayout>
+        <Grid AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3"
+              AbsoluteLayout.LayoutFlags="All">
+            <Frame Padding="0"
+                   BorderColor="Transparent"
+                   IsClippedToBounds="True">
+                <Image
+                    Source="https://rationalreligion.co.uk/wp-content/uploads/2017/11/How-the-quran-is-so-right-about-mountains-and-earthquakes-1.png"
+                    Aspect="AspectFill" />
+            </Frame>
+            <yummy:PancakeView BackgroundGradientStartColor="Transparent"
+                               BackgroundGradientEndColor="{Binding Source={x:Reference page}, Path=BackgroundColor}" />
+        </Grid>
+        <Frame AbsoluteLayout.LayoutBounds="0.5, 0.28, 80, 80"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               CornerRadius="70"
+               Padding="5"
+               BackgroundColor="#364058"
+               IsClippedToBounds="True">
+            <Frame Padding="0"
+                   HeightRequest="70"
+                   WidthRequest="70"
+                   CornerRadius="70"
+                   BackgroundColor="Transparent"
+                   IsClippedToBounds="True">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ProfileImage_OnClicked" />
+                </Frame.GestureRecognizers>
+                <Image x:Name="profileImage"
+                       Source="https://www.gravatar.com/avatar/3b316f33b1ca5e9f6da18e01432f7afe.jpg?s=200"
+                       Aspect="AspectFill" />
+            </Frame>
+        </Frame>
+        <Frame x:Name="contentFrame"
+               BackgroundColor="#2D364B"
+               Margin="20"
+               CornerRadius="10"
+               AbsoluteLayout.LayoutBounds="0, 1, 1, 0.65"
+               AbsoluteLayout.LayoutFlags="All">
+            <Grid x:Name="contentGrid" IsVisible="{Binding Source={x:Reference page}, Path=IsNotRotating}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button x:Name="actionButton"
+                        Grid.Row="0"
+                        Text="Register"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        BorderWidth="1"
+                        Clicked="Register_OnClicked" />
+                <ContentPresenter Grid.Row="1"
+                                  x:Name="content">
+                    <ContentPresenter.Triggers>
+                        <DataTrigger TargetType="ContentPresenter"
+                                     Binding="{Binding Source={x:Reference page}, Path=IsRegistering}"
+                                     Value="False">
+                            <Setter Property="Content">
+                                <MountainApp:MountainsList />
+                            </Setter>
+                        </DataTrigger>
+                        <DataTrigger TargetType="ContentPresenter"
+                                     Binding="{Binding Source={x:Reference page}, Path=IsRegistering}"
+                                     Value="True">
+                            <Setter Property="Content">
+                                <MountainApp:RegisterMountain />
+                            </Setter>
+                        </DataTrigger>
+                    </ContentPresenter.Triggers>
+                </ContentPresenter>
+            </Grid>
+        </Frame>
+    </AbsoluteLayout>
+</ContentPage>

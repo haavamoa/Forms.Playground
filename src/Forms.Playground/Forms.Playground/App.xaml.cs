@@ -1,4 +1,5 @@
 ﻿using System;
+using Forms.Playground.WeatherApp;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace Forms.Playground
             DIPS.Xamarin.UI.Library.Initialize();
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

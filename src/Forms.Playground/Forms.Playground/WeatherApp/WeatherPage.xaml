@@ -1,0 +1,150 @@
+﻿<?xml version="1.0"
+      encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Forms.Playground.WeatherApp.WeatherPage"
+             BackgroundColor="White"
+             Title="Bergen">
+    <ScrollView>
+        <AbsoluteLayout Padding="50">
+            <Grid AbsoluteLayout.LayoutBounds="0,0,1,1"
+                  AbsoluteLayout.LayoutFlags="All">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="3*" />
+                </Grid.RowDefinitions>
+                <Frame HasShadow="False"
+                       IsClippedToBounds="True"
+                       HorizontalOptions="StartAndExpand"
+                       Padding="0"
+                       Grid.Column="0"
+                       Grid.Row="0">
+                    <Image Source="https://i.imgur.com/bqr8Pdt.png"
+                           Aspect="AspectFit"
+                           HorizontalOptions="Start"
+                           HeightRequest="80"
+                           WidthRequest="80" />
+                </Frame>
+                <Label Grid.Column="2"
+                       Grid.Row="0"
+                       Text="6.2° C"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       HorizontalOptions="EndAndExpand"
+                       VerticalOptions="CenterAndExpand" />
+
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       Text="Shower Rain" />
+                <Grid Grid.Row="2"
+                      Grid.Column="0"
+                      RowSpacing="10">
+                    <Grid.Resources>
+                        <Style TargetType="StackLayout">
+                            <Setter Property="Spacing"
+                                    Value="0"></Setter>
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0">
+                        <Label Text="Temp min"
+                               FontSize="Small" />
+                        <Label Text="5° C"
+                               FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="1">
+                        <Label Text="Pressure"
+                               FontSize="Small" />
+                        <Label Text="1,014 hPA"
+                               FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="2">
+                        <Label Text="Sunrise"
+                               FontSize="Small" />
+                        <Label Text="08:53"
+                               FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="3">
+                        <Label Text="Wind"
+                               FontSize="Small" />
+                        <Label Text="E 2.1 m/s"
+                               FontSize="Medium" />
+                    </StackLayout>
+
+
+                </Grid>
+                <Grid Grid.Row="2"
+                      Grid.Column="2"
+                      RowSpacing="10">
+                    <Grid.Resources>
+                        <Style TargetType="StackLayout">
+                            <Setter Property="Spacing"
+                                    Value="0"></Setter>
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0">
+                        <Label Text="Temp max"
+                               FontSize="Small" />
+                        <Label Text="7.2° C"
+                               FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="1">
+                        <Label Text="Humidity"
+                               FontSize="Small" />
+                        <Label Text="75 %"
+                               FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="2">
+                        <Label Text="Sunset"
+                               FontSize="Small" />
+                        <Label Text="15:56"
+                               FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="3">
+                        <Label Text="Visibility"
+                               FontSize="Small" />
+                        <Label Text="10,000 m"
+                               FontSize="Medium" />
+                    </StackLayout>
+
+
+                </Grid>
+                <!-- Temp min and max -->
+
+                <!-- Pressure and humidity -->
+
+
+                <!-- Sunrise and sunset -->
+                <!-- Wind and visibility -->
+            </Grid>
+
+
+        </AbsoluteLayout>
+    </ScrollView>
+</ContentPage>

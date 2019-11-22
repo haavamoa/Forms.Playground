@@ -6,7 +6,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              xmlns:System="clr-namespace:System;assembly=netstandard"
-             xmlns:Models="clr-namespace:Forms.Playground.Models;assembly=Forms.Playground"
              xmlns:Playground="clr-namespace:Forms.Playground;assembly=Forms.Playground"
              xmlns:MountainApp="clr-namespace:Forms.Playground.MountainApp;assembly=Forms.Playground"
              mc:Ignorable="d"

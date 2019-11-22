@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Forms.Playground.MountainApp
+namespace Forms.Playground.WeatherApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MountainsList : ContentView
+    public partial class WeatherPage : ContentPage
     {
-        public MountainsList()
+        public WeatherPage()
         {
             InitializeComponent();
         }

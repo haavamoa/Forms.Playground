@@ -143,8 +143,6 @@
                 <!-- Sunrise and sunset -->
                 <!-- Wind and visibility -->
             </Grid>
-
-
         </AbsoluteLayout>
     </ScrollView>
 </ContentPage>

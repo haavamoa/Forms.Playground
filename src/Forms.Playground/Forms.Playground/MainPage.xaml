@@ -9,5 +9,6 @@
         <Button Text="MountainApp" Clicked="NavigateToMountainApp"/>
         <Button Text="WeatherApp" Clicked="NavigateToWeatherApp"/>
         <Button Text="Dribbble.Categories" Clicked="NavigateToCategories"/>
+        <Button Text="Fancy row removal" Clicked="NavigateToFancyRowRemoval"/>
     </StackLayout>
 </ContentPage>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0"
+      encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:System="clr-namespace:System;assembly=netstandard"
+             xmlns:FancyRowRemoval="clr-namespace:Forms.Playground.FancyRowRemoval;assembly=Forms.Playground"
+             mc:Ignorable="d"
+             x:Class="Forms.Playground.FancyRowRemoval.FancyRowRemovalPage"
+             BackgroundColor="#4048C9"
+             x:Name="fancyRowRemovalPageCodeBehind"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+    <Grid BindingContext="{Binding Source={x:Reference fancyRowRemovalPageCodeBehind}}"
+          Padding="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0"
+                     Orientation="Horizontal">
+            <Label Text="Method:"
+                   VerticalTextAlignment="Center"
+                   FontSize="20"
+                   TextColor="WhiteSmoke" />
+            <Picker SelectedItem="{Binding SelectedRemovalMethod}"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#4048C9"
+                    TextColor="WhiteSmoke"
+                    FontSize="20">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type System:String}">
+                        <x:String>Fade out</x:String>
+                        <x:String>Scale out</x:String>
+                        <x:String>Slide out</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Spacing="0">
+                <BindableLayout.ItemsSource>
+                    <x:Array Type="{x:Type System:String}">
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                        <x:String>Tap to remove</x:String>
+                    </x:Array>
+                </BindableLayout.ItemsSource>
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="{x:Type System:String}">
+                        <!-- Fake ContentView to be able to set margins between items -->
+                        <ContentView>
+                            <ContentView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Remove" />
+                            </ContentView.GestureRecognizers>
+                            <Frame HasShadow="False"
+                                   BackgroundColor="#505AFC"
+                                   Margin="2"
+                                   Padding="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding .}"
+                                           FontSize="20"
+                                           HorizontalOptions="Start"
+                                           VerticalTextAlignment="Center"
+                                           TextColor="WhiteSmoke" />
+                                </StackLayout>
+                            </Frame>
+                        </ContentView>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout></ScrollView>
+    </Grid>
+</ContentPage>

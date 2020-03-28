@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Forms.Playground.Dribbble.Categories;
 using Forms.Playground.MountainApp;
 using Forms.Playground.WeatherApp;
 using Xamarin.Forms;
@@ -26,6 +27,11 @@ namespace Forms.Playground
         private void NavigateToWeatherApp(object sender, EventArgs e)
         {
             App.Current.MainPage.Navigation.PushAsync(new WeatherPage());
+        }
+
+        private void NavigateToCategories(object sender, EventArgs e)
+        {
+            App.Current.MainPage.Navigation.PushAsync(new CategoriesPage());
         }
     }
 }

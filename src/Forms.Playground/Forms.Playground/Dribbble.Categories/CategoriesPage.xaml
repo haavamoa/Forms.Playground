@@ -1,0 +1,65 @@
+﻿<?xml version="1.0"
+      encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:System="clr-namespace:System;assembly=netstandard"
+             xmlns:Categories="clr-namespace:Forms.Playground.Dribbble.Categories;assembly=Forms.Playground"
+             xmlns:PancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="Forms.Playground.Dribbble.Categories.CategoriesPage"
+             x:Name="codeBehind">
+    <ContentPage.Resources>
+        <x:Array x:Key="CategoriesList"
+                 Type="{x:Type Categories:Category}">
+            <Categories:Category Name="Space"
+                                 SubName="Solar System"
+                                 ImageName="Saturn"
+                                 ImageFile="space.png" />
+            <Categories:Category Name="Relief"
+                                 SubName="Mountains"
+                                 ImageName="Himalaya"
+                                 ImageFile="relief.png" />
+            <Categories:Category Name="Nature"
+                                 SubName="Grow"
+                                 ImageName="Forest"
+                                 ImageFile="nature.png" />
+            <Categories:Category Name="Take off"
+                                 SubName="Apollo 11"
+                                 ImageName="Space"
+                                 ImageFile="takeoff.png" />
+        </x:Array>
+    </ContentPage.Resources>
+    <PancakeView:PancakeView x:Name="backgroundPancake">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <CarouselView ItemsSource="{StaticResource CategoriesList}"
+                          CurrentItemChanged="CarouselView_OnCurrentItemChanged"
+                          Grid.Row="1"
+                          BackgroundColor="Transparent">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate x:DataType="Categories:Category">
+                        <AbsoluteLayout>
+                            <Frame AbsoluteLayout.LayoutBounds="0.5,0.5,0.7,0.7"
+                                   AbsoluteLayout.LayoutFlags="All"
+                                   Padding="0">
+                                <Image 
+                                       Source="{Binding ImageFile}"
+                                       Aspect="AspectFit"
+                                       Scale="1"
+                                       HorizontalOptions="Start"/>
+                            </Frame>
+                        </AbsoluteLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        </Grid>
+    </PancakeView:PancakeView>
+
+</ContentPage>

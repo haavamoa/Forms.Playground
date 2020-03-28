@@ -1,4 +1,4 @@
-# FancyRow Removal Idea
+# FancyRow Removal
 When an row in a list is removed, it can have different ways of animating its removal.
 
 ## Methods

@@ -61,5 +61,26 @@ namespace Forms.Playground.FancyRowRemoval
             await view.FadeTo(0);
             view.Animate("RemovalAnimation", d => { view.HeightRequest = d; }, view.Height, 0);
         }
+
+        private void Element_OnChildAdded(object sender, ElementEventArgs e)
+        {
+            
+        }
+
+        private void VisualElement_OnSizeChanged(object sender, EventArgs e)
+        {
+            if ((sender is ContentView contentView))
+            {
+                var panGesture = new PanGestureRecognizer();
+                panGesture.PanUpdated += PanGesture_OnPanUpdated;
+                new PanGestureExtension().ShouldRespectOtherPans(contentView);
+                contentView.GestureRecognizers.Add(panGesture);
+            }
+        }
+
+        private void PanGesture_OnPanUpdated(object sender, PanUpdatedEventArgs e)
+        {
+            
+        }
     }
 }

@@ -60,6 +60,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FancyRowRemoval\PanGestureExtension.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -184,4 +185,5 @@
   <ItemGroup>
     <BundleResource Include="Resources\takeoff%403x.png" />
   </ItemGroup>
+  <ItemGroup />
 </Project>

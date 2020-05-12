@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Forms.Playground.FancyRowRemoval;
 using Foundation;
 using UIKit;
 
@@ -25,7 +25,7 @@ namespace Forms.Playground.iOS
             Xamarin.Forms.Forms.SetFlags("CarouselView_Experimental");
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
+            PanGestureExtension.Instance = new FancyRowRemoval.PanGestureExtension();
             return base.FinishedLaunching(app, options);
         }
     }

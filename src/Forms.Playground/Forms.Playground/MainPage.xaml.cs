@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Forms.Playground.AppThemeColor;
 using Forms.Playground.Dribbble.Categories;
 using Forms.Playground.FancyRowRemoval;
 using Forms.Playground.MountainApp;
@@ -20,23 +17,14 @@ namespace Forms.Playground
             InitializeComponent();
         }
 
-        private void NavigateToMountainApp(object sender, EventArgs e)
-        {
-            App.Current.MainPage.Navigation.PushAsync(new MountainPage());
-        }
+        private async void NavigateToAppThemeColor(object sender, EventArgs e) => await Navigation.PushAsync(new AppThemeColorPage());
 
-        private void NavigateToWeatherApp(object sender, EventArgs e)
-        {
-            App.Current.MainPage.Navigation.PushAsync(new WeatherPage());
-        }
+        private async void NavigateToCategories(object sender, EventArgs e) => await Navigation.PushAsync(new CategoriesPage());
 
-        private void NavigateToCategories(object sender, EventArgs e)
-        {
-            App.Current.MainPage.Navigation.PushAsync(new CategoriesPage());
-        }
-        private void NavigateToFancyRowRemoval(object sender, EventArgs e)
-        {
-            App.Current.MainPage.Navigation.PushAsync(new FancyRowRemovalPage());
-        }
+        private async void NavigateToFancyRowRemoval(object sender, EventArgs e) => await Navigation.PushAsync(new FancyRowRemovalPage());
+
+        private async void NavigateToMountainApp(object sender, EventArgs e) => await Navigation.PushAsync(new MountainPage());
+
+        private async void NavigateToWeatherApp(object sender, EventArgs e) => await Navigation.PushAsync(new WeatherPage());
     }
 }

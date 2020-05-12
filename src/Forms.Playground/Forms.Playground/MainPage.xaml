@@ -17,5 +17,7 @@
                 Text="Fancy row removal" />
         <Button Clicked="NavigateToAppThemeColor"
                 Text="AppThemeColor" />
+        <Button Clicked="NavigateToCascadeInputTransparent"
+                Text="CascadeInputTransparent" />
     </StackLayout>
 </ContentPage>

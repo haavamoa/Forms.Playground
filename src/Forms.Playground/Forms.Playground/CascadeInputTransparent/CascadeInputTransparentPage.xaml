@@ -12,7 +12,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Image Grid.Row="0"
-               Grid.RowSpan="2"
+               Grid.RowSpan="1"
                Aspect="AspectFill"
                Source="https://www.creativefreedom.co.uk/wp-content/uploads/2016/03/screenshot.png">
             <Image.GestureRecognizers>
@@ -28,7 +28,7 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0"
-                    BackgroundColor="Purple"
+                    BackgroundColor="Aqua"
                     HorizontalOptions="Start"
                     Text="Button"
                     TextColor="White"

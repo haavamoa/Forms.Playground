@@ -5,13 +5,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Forms.Playground.AppThemeColor.AppThemeColorPage">
-    <!-- Experimental, remember to add experimental flags-->
-    <Grid BackgroundColor="{OnAppTheme Light=#9768D1, Dark=#25064C}">
+    <!-- New way-->
+    <Grid BackgroundColor="{OnAppTheme Light={StaticResource LightGridColor}, Dark={StaticResource DarkGridColor}}">
         <Label HorizontalOptions="Center"
                VerticalOptions="Center"
                Text=".NET"
                FontSize="96"
                FontAttributes="Bold"
-               TextColor="{OnAppTheme Light=White, Dark=#9768D1}"/>
+               TextColor="{OnAppTheme Light={StaticResource LightLabelTextColor}, Dark={StaticResource DarkLabelTextColor}}" />
     </Grid>
+
+    <!-- Old way -->
+    <!--<Grid BackgroundColor="{DynamicResource DynamicGridColor}">
+        <Label HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Text=".NET"
+               FontSize="96"
+               FontAttributes="Bold"
+               TextColor="{DynamicResource DynamicLabelTextColor}" />
+    </Grid>-->
+
 </ContentPage>

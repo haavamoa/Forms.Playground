@@ -19,7 +19,12 @@ namespace Forms.Playground.CascadeInputTransparent
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            App.Current.MainPage.DisplayAlert("Image tapped", "The image was tapped", "Ok");
+
         }
+
+        //private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        //{
+        //    App.Current.MainPage.DisplayAlert("Image tapped", "The image was tapped", "Ok");
+        //}
     }
 }

@@ -6,6 +6,16 @@
              mc:Ignorable="d"
              x:Class="Forms.Playground.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <!-- Base them , gets set at startup and when theme changed-->
+            <Color x:Key="DynamicGridColor" />
+            <Color x:Key="DynamicLabelTextColor" />
+            <!-- LightTheme-->
+            <Color x:Key="LightLabelTextColor">White</Color>
+            <Color x:Key="LightGridColor">#9768D1</Color>
+            <!-- DarkTheme-->
+            <Color x:Key="DarkGridColor">#25064C</Color>
+            <Color x:Key="DarkLabelTextColor">#9768D1</Color>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Forms.Playground.GoToLayout.GoToLayoutPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Button Text="Change state" Clicked="ChangeState" />
+        <Grid Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <BoxView Grid.Column="0"
+                         Grid.Row="0"
+                         x:Name="FirstState"
+                         BackgroundColor="Red" />
+                <BoxView Grid.Column="1"
+                         Grid.Row="0"
+                         Grid.RowSpan="2"
+                         x:Name="SecondState"
+                         BackgroundColor="Green" />
+                <BoxView Grid.Column="0"
+                         Grid.Row="1"
+                         x:Name="ThirdState"
+                         BackgroundColor="Blue" />
+            </Grid>
+            <BoxView x:Name="TheItem" 
+                     Grid.Row="0"
+                     Grid.Column="0"
+                     BackgroundColor="Coral" />
+        </Grid>
+    </Grid>
+</ContentPage>

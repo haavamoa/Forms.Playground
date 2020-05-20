@@ -19,5 +19,7 @@
                 Text="AppThemeColor" />
         <Button Clicked="NavigateToCascadeInputTransparent"
                 Text="CascadeInputTransparent" />
+        <Button Clicked="NavigateToGoToLayout"
+                Text="GoToLayout" />
     </StackLayout>
 </ContentPage>

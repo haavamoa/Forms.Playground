@@ -3,6 +3,7 @@ using Forms.Playground.AppThemeColor;
 using Forms.Playground.CascadeInputTransparent;
 using Forms.Playground.Dribbble.Categories;
 using Forms.Playground.FancyRowRemoval;
+using Forms.Playground.GoToLayout;
 using Forms.Playground.MountainApp;
 using Forms.Playground.WeatherApp;
 using Xamarin.Forms;
@@ -28,5 +29,7 @@ namespace Forms.Playground
 
         private async void NavigateToWeatherApp(object sender, EventArgs e) => await Navigation.PushAsync(new WeatherPage());
         private async void NavigateToCascadeInputTransparent(object sender, EventArgs e) => await Navigation.PushAsync(new CascadeInputTransparentPage());
+
+        private async void NavigateToGoToLayout(object sender, EventArgs e) => await Navigation.PushAsync(new GoToLayoutPage());
     }
 }

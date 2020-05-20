@@ -1,0 +1,8 @@
+﻿<Grid BackgroundColor="{OnAppTheme Light={StaticResource LightGridColor}, Dark={StaticResource DarkGridColor}}">
+    <Label HorizontalOptions="Center"
+           VerticalOptions="Center"
+           Text=".NET"
+           FontSize="96"
+           FontAttributes="Bold"
+           TextColor="{OnAppTheme Light={StaticResource LightLabelTextColor}, Dark={StaticResource DarkLabelTextColor}}" />
+</Grid>

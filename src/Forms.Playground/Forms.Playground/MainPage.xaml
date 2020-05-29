@@ -8,7 +8,8 @@
              mc:Ignorable="d">
     <StackLayout>
         <Button Clicked="NavigateToMountainApp"
-                Text="MountainApp" />
+                Text="MountainApp" 
+                />
         <Button Clicked="NavigateToWeatherApp"
                 Text="WeatherApp" />
         <Button Clicked="NavigateToCategories"
@@ -21,5 +22,9 @@
                 Text="CascadeInputTransparent" />
         <Button Clicked="NavigateToGoToLayout"
                 Text="GoToLayout" />
+        <Button Clicked="NavigateToFancyDetail"
+                Text="FancyDetail" />
+        <Button Clicked="NavigateToSwipeViewToolTip"
+                Text="SwipeViewToolTip" />
     </StackLayout>
 </ContentPage>

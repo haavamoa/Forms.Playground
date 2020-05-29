@@ -2,9 +2,11 @@
 using Forms.Playground.AppThemeColor;
 using Forms.Playground.CascadeInputTransparent;
 using Forms.Playground.Dribbble.Categories;
+using Forms.Playground.FancyDetail;
 using Forms.Playground.FancyRowRemoval;
 using Forms.Playground.GoToLayout;
 using Forms.Playground.MountainApp;
+using Forms.Playground.SwipeViewToolTip;
 using Forms.Playground.WeatherApp;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -31,5 +33,9 @@ namespace Forms.Playground
         private async void NavigateToCascadeInputTransparent(object sender, EventArgs e) => await Navigation.PushAsync(new CascadeInputTransparentPage());
 
         private async void NavigateToGoToLayout(object sender, EventArgs e) => await Navigation.PushAsync(new GoToLayoutPage());
+
+        private async void NavigateToFancyDetail(object sender, EventArgs e) => await Navigation.PushAsync(new FancyDetailPage());
+
+        private async void NavigateToSwipeViewToolTip(object sender, EventArgs e) => await Navigation.PushAsync(new SwipeViewToolTipPage());
     }
 }

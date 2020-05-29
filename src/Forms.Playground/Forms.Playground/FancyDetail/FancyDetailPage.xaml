@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:FancyDetail="clr-namespace:Forms.Playground.FancyDetail;assembly=Forms.Playground"
+             mc:Ignorable="d"
+             x:Class="Forms.Playground.FancyDetail.FancyDetailPage"
+             BackgroundColor="#FFFFF0">
+    <ContentPage.Resources>
+        <x:Array x:Key="Data"
+                 Type="{x:Type FancyDetail:Item}">
+            <FancyDetail:Item Name="Umbrella"
+                              ImageSource="https://images-na.ssl-images-amazon.com/images/I/61g7qrq9bQL._SX466_.jpg"
+                              Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+            <FancyDetail:Item Name="Coffee"
+                              ImageSource="https://www.villeroy-boch.no/shop/media/catalog/product/cache/23/image/560x/9df78eab33525d08d6e5fb8d27136e95/1/0/1046361290a/villeroy-boch-Anmut-Platinum-No.1-Coffee-cup-and-saucer-2pcs-30.jpg"
+                              Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+        </x:Array>
+    </ContentPage.Resources>
+    <ScrollView x:Name="ListScrollView">
+        <StackLayout x:Name="ListStackLayout"
+                     BackgroundColor="Red"
+                     BindableLayout.ItemsSource="{StaticResource Data}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type FancyDetail:Item}">
+                    <FancyDetail:FancyItem />
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

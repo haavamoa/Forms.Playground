@@ -26,5 +26,7 @@
                 Text="FancyDetail" />
         <Button Clicked="NavigateToSwipeViewToolTip"
                 Text="SwipeViewToolTip" />
+        <Button Clicked="NavigateToBackdropPage"
+                Text="BackdropPage" />
     </StackLayout>
 </ContentPage>

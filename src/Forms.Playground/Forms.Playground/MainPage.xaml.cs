@@ -37,5 +37,8 @@ namespace Forms.Playground
         private async void NavigateToFancyDetail(object sender, EventArgs e) => await Navigation.PushAsync(new FancyDetailPage());
 
         private async void NavigateToSwipeViewToolTip(object sender, EventArgs e) => await Navigation.PushAsync(new SwipeViewToolTipPage());
+
+        private async void NavigateToBackdropPage(object sender, EventArgs e)
+         => await Navigation.PushAsync(new BackdropPage.BackdropPage());
     }
 }
